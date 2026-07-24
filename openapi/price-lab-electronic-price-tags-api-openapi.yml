@@ -1,0 +1,113 @@
+openapi: 3.0.3
+info:
+  title: Price Lab Authentication Electronic Price Tags API
+  description: 'REST API for the Price Lab retail pricing platform: product and category master data, bulk data import (sales, stock, replenishment, competitor prices), price recommendations, competitor price scraping and policies, electronic shelf labels (ESL) and flash strategies, and store-level price management. Derived from the provider''s published endpoint index (price-lab.readme.io/llms.txt).'
+  version: 1.0.0
+  contact:
+    name: Price Lab
+    url: https://pricelabsolutions.com
+servers:
+- url: https://backend.pricelab.com.pe/api
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Electronic Price Tags
+paths:
+  /templatesubcategories/{id_category}:
+    get:
+      operationId: listLabelChildTemplates
+      summary: List child label templates for a category
+      tags:
+      - Electronic Price Tags
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+      parameters:
+      - name: id_category
+        in: path
+        required: true
+        schema:
+          type: integer
+  /templatecategories/:
+    get:
+      operationId: listLabelParentTemplates
+      summary: List parent label templates
+      tags:
+      - Electronic Price Tags
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /flashstrategies/{id}/:
+    delete:
+      operationId: deleteFlashStrategy
+      summary: Delete a flash strategy
+      tags:
+      - Electronic Price Tags
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+  /flashstrategies/active_light_led_batch/:
+    post:
+      operationId: createFlashStrategy
+      summary: Create a flash strategy (activate LED lights in batch)
+      tags:
+      - Electronic Price Tags
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /esls/active_light_led/:
+    post:
+      operationId: activateEslLed
+      summary: Turn on an electronic shelf label LED
+      tags:
+      - Electronic Price Tags
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /flashstrategies/:
+    get:
+      operationId: listFlashStrategies
+      summary: List flash strategies
+      tags:
+      - Electronic Price Tags
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT access token obtained via POST /login/ and refreshed via POST /token/refresh/

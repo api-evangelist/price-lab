@@ -1,0 +1,36 @@
+openapi: 3.0.3
+info:
+  title: Price Lab Authentication Users API
+  description: 'REST API for the Price Lab retail pricing platform: product and category master data, bulk data import (sales, stock, replenishment, competitor prices), price recommendations, competitor price scraping and policies, electronic shelf labels (ESL) and flash strategies, and store-level price management. Derived from the provider''s published endpoint index (price-lab.readme.io/llms.txt).'
+  version: 1.0.0
+  contact:
+    name: Price Lab
+    url: https://pricelabsolutions.com
+servers:
+- url: https://backend.pricelab.com.pe/api
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Users
+paths:
+  /users/get_data/:
+    get:
+      operationId: getUserData
+      summary: Retrieve authenticated user data
+      tags:
+      - Users
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT access token obtained via POST /login/ and refreshed via POST /token/refresh/

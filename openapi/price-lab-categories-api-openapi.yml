@@ -1,0 +1,85 @@
+openapi: 3.0.3
+info:
+  title: Price Lab Authentication Categories API
+  description: 'REST API for the Price Lab retail pricing platform: product and category master data, bulk data import (sales, stock, replenishment, competitor prices), price recommendations, competitor price scraping and policies, electronic shelf labels (ESL) and flash strategies, and store-level price management. Derived from the provider''s published endpoint index (price-lab.readme.io/llms.txt).'
+  version: 1.0.0
+  contact:
+    name: Price Lab
+    url: https://pricelabsolutions.com
+servers:
+- url: https://backend.pricelab.com.pe/api
+  description: Production
+security:
+- bearerAuth: []
+tags:
+- name: Categories
+paths:
+  /categoryproducts/:
+    get:
+      operationId: listCategories
+      summary: List product categories
+      tags:
+      - Categories
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+    post:
+      operationId: createCategory
+      summary: Create a product category
+      tags:
+      - Categories
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /categoryproducts/{id}/:
+    put:
+      operationId: updateCategory
+      summary: Edit a product category
+      tags:
+      - Categories
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    delete:
+      operationId: deleteCategory
+      summary: Delete a product category
+      tags:
+      - Categories
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT access token obtained via POST /login/ and refreshed via POST /token/refresh/
