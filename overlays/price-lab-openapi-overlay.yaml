@@ -1,0 +1,22 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Price Lab API
+  version: 1.0.0
+# generated: '2026-07-20'
+# method: generated
+# source: openapi/price-lab-openapi.yml
+extends: openapi/price-lab-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-enriched: true
+      x-apievangelist-derived-from: https://price-lab.readme.io/llms.txt
+      x-apievangelist-auth: jwt-bearer
+  - target: $.info
+    update:
+      x-artifacts:
+        authentication: authentication/price-lab-authentication.yml
+        conventions: conventions/price-lab-conventions.yml
+        errors: errors/price-lab-problem-types.yml
+        data-model: data-model/price-lab-data-model.yml
+        agentic-access: agentic-access/price-lab-agentic-access.yml

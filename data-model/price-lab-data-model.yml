@@ -1,0 +1,99 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/price-lab-openapi.yml
+entities:
+- name: Product
+  path: /products/
+  operations:
+  - listProducts
+  - createProduct
+  - getProduct
+  - updateProduct
+  - deleteProduct
+- name: CategoryProduct
+  path: /categoryproducts/
+  operations:
+  - listCategories
+  - createCategory
+  - updateCategory
+  - deleteCategory
+- name: ProductStore
+  path: /productstores/
+  operations:
+  - listProductStores
+  - initProductStores
+  - exportProductStores
+- name: PriceMachine (Recommendation)
+  path: /pricemachines/
+  operations:
+  - respondToRecommendation
+  - exportRecommendations
+  - exportPriceHistory
+- name: PriceScraping (Competitor Price)
+  path: /pricescrapings/
+  operations:
+  - exportScrapedPrices
+  - exportPriceBySku
+- name: PriceScrapingRule (Policy)
+  path: /pricescrapingrules/
+  operations:
+  - createPricingPolicies
+  - exportPricingPolicies
+- name: PriceManager (Promotion)
+  path: /pricemanagers/
+  operations:
+  - createPromotionBatch
+  - createPromotionUnit
+- name: FlashStrategy
+  path: /flashstrategies/
+  operations:
+  - listFlashStrategies
+  - createFlashStrategy
+  - deleteFlashStrategy
+- name: ESL (Electronic Shelf Label)
+  path: /esls/
+  operations:
+  - activateEslLed
+- name: TemplateCategory
+  path: /templatecategories/
+  operations:
+  - listLabelParentTemplates
+- name: TemplateSubCategory
+  path: /templatesubcategories/
+  operations:
+  - listLabelChildTemplates
+- name: RecordsImportFile
+  path: /recordsimportfiles/
+  operations:
+  - importRecordsFile
+- name: User
+  path: /users/
+  operations:
+  - getUserData
+relationships:
+- from: Product
+  type: belongs_to
+  to: CategoryProduct
+  via: category
+- from: ProductStore
+  type: belongs_to
+  to: Product
+  via: product
+- from: PriceScraping
+  type: belongs_to
+  to: Product
+  via: sku
+- from: PriceMachine
+  type: belongs_to
+  to: Product
+  via: product
+- from: TemplateSubCategory
+  type: belongs_to
+  to: TemplateCategory
+  via: id_category
+- from: FlashStrategy
+  type: has_many
+  to: ESL
+  via: esl
+notes: Entities and relationships inferred from documented endpoint paths and path parameters; the OpenAPI
+  does not publish component schemas, so field-level detail is not available.

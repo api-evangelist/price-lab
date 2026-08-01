@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: derived
+format: http-status
+source: openapi/price-lab-openapi.yml
+note: Derived from documented 4xx responses in the OpenAPI. The provider does not publish an application/problem+json
+  envelope; catalog keyed on HTTP status.
+problems:
+- status: 400
+  title: Bad request
+  remediation: Validate the request body and parameters against the operation schema.
+  raised_by_count: 35
+  example_operations:
+  - openapi/price-lab-openapi.yml#activateEslLed
+  - openapi/price-lab-openapi.yml#createCategory
+  - openapi/price-lab-openapi.yml#createFlashStrategy
+  - openapi/price-lab-openapi.yml#createPricingPolicies
+  - openapi/price-lab-openapi.yml#createProduct
+- status: 401
+  title: Unauthorized
+  remediation: 'Obtain a JWT via POST /login/ and send it as Authorization: Bearer <token>; refresh via
+    POST /token/refresh/ when expired.'
+  raised_by_count: 34
+  example_operations:
+  - openapi/price-lab-openapi.yml#activateEslLed
+  - openapi/price-lab-openapi.yml#createCategory
+  - openapi/price-lab-openapi.yml#createFlashStrategy
+  - openapi/price-lab-openapi.yml#createPricingPolicies
+  - openapi/price-lab-openapi.yml#createProduct

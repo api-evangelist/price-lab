@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: generated
+source: openapi/price-lab-openapi.yml
+skills:
+- file: price-lab-authenticate.md
+  name: Authenticate with the Price Lab API
+  api: openapi/price-lab-openapi.yml
+  operations: [login, refreshToken, getUserData]
+- file: price-lab-manage-catalog.md
+  name: Manage the Price Lab product catalog
+  api: openapi/price-lab-openapi.yml
+  operations: [listCategories, createCategory, listProducts, createProduct, updateProduct, updatePriceBatch, updateCostBatch, updatePriceAndCostBatch]
+- file: price-lab-competitor-pricing.md
+  name: Run competitor pricing and recommendations on Price Lab
+  api: openapi/price-lab-openapi.yml
+  operations: [importRecordsFile, createPricingPolicies, exportScrapedPrices, exportPriceBySku, exportRecommendations, respondToRecommendation]

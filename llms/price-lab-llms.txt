@@ -1,0 +1,46 @@
+# Price Lab Documentation
+
+> Documentation for Price Lab
+
+## API Reference
+- [Bearer](https://price-lab.readme.io/reference/bearer.md)
+- [Login](https://price-lab.readme.io/reference/getting-started-with-your-api-1.md): POST: https://backend.pricelab.com.pe/api/login/
+- [Refresh](https://price-lab.readme.io/reference/refresh.md): POST: https://backend.pricelab.com.pe/api/token/refresh/
+- [Datos de usuario](https://price-lab.readme.io/reference/listar-de-plantillas-de-etiquetas-padre-copy.md): GET: https://backend.pricelab.com.pe/api/users/get_data/
+- [Listar](https://price-lab.readme.io/reference/listar.md): GET: https://backend.pricelab.com.pe/api/products/
+- [Crear](https://price-lab.readme.io/reference/crear.md): POST: https://backend.pricelab.com.pe/api/products/
+- [Obtener](https://price-lab.readme.io/reference/obtener.md): GET: https://backend.pricelab.com.pe/api/products/{id}/
+- [Editar](https://price-lab.readme.io/reference/editar.md): PUT: https://backend.pricelab.com.pe/api/products/{id}/
+- [Eliminar](https://price-lab.readme.io/reference/eliminar.md): DELETE: https://backend.pricelab.com.pe/api/products/{id}/
+- [Costos y precios](https://price-lab.readme.io/reference/actualización-de-costos-y-precios.md): POST:https://backend.pricelab.com.pe/api/products/update_price_cost_for_lote/
+- [Actualización de precios](https://price-lab.readme.io/reference/actualización-de-precios.md): POST:https://backend.pricelab.com.pe/api/products/update_price_product_for_lote/
+- [Actualización de costos](https://price-lab.readme.io/reference/actualización-de-precios-copy.md): POST:https://backend.pricelab.com.pe/api/products/update_cost_product_for_lote/
+- [Transacciones de ventas](https://price-lab.readme.io/reference/transacciones-de-ventas.md): POST https://backend.pricelab.com.pe/api/recordsimportfiles/
+- [Stock](https://price-lab.readme.io/reference/stock.md): POST: https://backend.pricelab.com.pe/api/recordsimportfiles/
+- [Datos extras relevantes](https://price-lab.readme.io/reference/data-extra.md): POST: https://backend.pricelab.com.pe/api/recordsimportfiles/
+- [Reposición](https://price-lab.readme.io/reference/reposición-de-producto.md): POST: https://backend.pricelab.com.pe/api/recordsimportfiles/
+- [Maestro de ofertas](https://price-lab.readme.io/reference/cargar-maestro-ofertas.md): POST: https://backend.pricelab.com.pe/api/recordsimportfiles/
+- [Aceptación y rechazo de recomendaciones](https://price-lab.readme.io/reference/aceptación-y-rechazo-de-recomendaciones.md): POST: https://backend.pricelab.com.pe/api/pricemachines/response_recommendation/
+- [Creación y actualización de productos](https://price-lab.readme.io/reference/actualización-de-datos-y-estado-de-productos.md): POST: https://backend.pricelab.com.pe/api/products/update_product_info_for_lote/
+- [Precios de la competencia](https://price-lab.readme.io/reference/actualización-de-precios-de-la-competencia.md): POST: https://backend.pricelab.com.pe/api/recordsimportfiles/
+- [Políticas de precios competitivas](https://price-lab.readme.io/reference/cargar-registros-de-reposición-copy.md): POST: https://backend.pricelab.com.pe/api/pricescrapingrules/create_policies/
+- [Plantillas de etiquetas hijas - Listar](https://price-lab.readme.io/reference/listar-de-plantillas-de-etiquetas-copy-1.md): GET: https://backend.pricelab.com.pe/api/templatesubcategories/{id_category}
+- [Plantillas de etiquetas padre - Listar](https://price-lab.readme.io/reference/listar-de-categorías.md): GET: https://backend.pricelab.com.pe/api/templatecategories/
+- [Estrategias Flash - Eliminar](https://price-lab.readme.io/reference/eliminar-1.md): DELETE: https://backend.pricelab.com.pe/api/flashstrategies/{id}/
+- [Estrategias Flash - Crear](https://price-lab.readme.io/reference/crear-1.md): POST: https://backend.pricelab.com.pe/api/flashstrategies/active_light_led_batch/
+- [Estrategias Flash - Encender LED](https://price-lab.readme.io/reference/encender-led.md): POST: https://backend.pricelab.com.pe/api/esls/active_light_led/
+- [Estrategias Flash - Listar](https://price-lab.readme.io/reference/listar-1.md): GET: https://backend.pricelab.com.pe/api/flashstrategies/
+- [Exportar datos](https://price-lab.readme.io/reference/exportar-datos.md): GET:https://backend.pricelab.com.pe/api/productstores/export_for_batch/
+- [Gestión de precios - Lote](https://price-lab.readme.io/reference/gestión-de-precios-por-lote.md): POST: https://backend.pricelab.com.pe/api/pricemanagers/create_promotion_massive/
+- [Gestión de precios - Unidad](https://price-lab.readme.io/reference/gestión-de-precios-por-unidad.md): POST: https://backend.pricelab.com.pe/api/pricemanagers/create_promotion_unit_store/
+- [Gestión de precios por tienda - Listar](https://price-lab.readme.io/reference/listar-2.md): GET: https://backend.pricelab.com.pe/api/productstores/
+- [Gestión de productos por tiendas - Iniciar](https://price-lab.readme.io/reference/asignación-de-productos-a-la-tienda.md): GET: https://backend.pricelab.com.pe/api/productstores/create_or_update/
+- [Exportar precios](https://price-lab.readme.io/reference/exportar-precios.md): GET:https://backend.pricelab.com.pe/api/pricescrapings/export_data_scraping/
+- [Exportar políticas de precios](https://price-lab.readme.io/reference/exportar-políticas-de-precios.md): GET:https://backend.pricelab.com.pe/api/pricescrapingrules/export_data_policy_match/
+- [Exportar precio por SKU](https://price-lab.readme.io/reference/exportar-precio-por-sku.md): GET: https://backend.pricelab.com.pe/api/pricescrapings/
+- [Exportar recomendaciones](https://price-lab.readme.io/reference/exportar-recomendaciones.md): GET: https://backend.pricelab.com.pe/api/pricemachines/export_for_batch/
+- [Exportar histórico de precios](https://price-lab.readme.io/reference/exportar-historico-de-precios.md): GET:https://backend.pricelab.com.pe/api/pricemachines/export_history_prices/
+- [Listar](https://price-lab.readme.io/reference/listar-de-plantillas-de-etiquetas-copy.md): GET: https://backend.pricelab.com.pe/api/categoryproducts/
+- [Crear](https://price-lab.readme.io/reference/crear-copy.md): POST: https://backend.pricelab.com.pe/api/categoryproducts/
+- [Editar](https://price-lab.readme.io/reference/crear-copy-1.md): PUT: https://backend.pricelab.com.pe/api/categoryproducts/{id}/
+- [Eliminar](https://price-lab.readme.io/reference/eliminar-copy.md): DELETE: https://backend.pricelab.com.pe/api/categoryproducts/{id}/

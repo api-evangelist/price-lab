@@ -1,0 +1,15 @@
+generated: '2026-07-20'
+method: searched
+source: https://price-lab.readme.io/
+versioning:
+  scheme: none-documented
+  current: v1
+  notes: API is unversioned in the base path (/api/...); no explicit versioning policy published.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No deprecation policy or RFC 8594 Sunset/Deprecation header support documented.
+status_page: null
+sla: null
+deprecated_operations: []
+notes: No status page, SLA, or deprecation policy found on the developer portal or marketing site.

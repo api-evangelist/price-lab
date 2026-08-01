@@ -1,0 +1,529 @@
+# generated: '2026-07-20'
+# method: derived
+# source: https://price-lab.readme.io/llms.txt
+openapi: 3.0.3
+info:
+  title: Price Lab API
+  description: 'REST API for the Price Lab retail pricing platform: product and category master data,
+    bulk data import (sales, stock, replenishment, competitor prices), price recommendations, competitor
+    price scraping and policies, electronic shelf labels (ESL) and flash strategies, and store-level price
+    management. Derived from the provider''s published endpoint index (price-lab.readme.io/llms.txt).'
+  version: 1.0.0
+  contact:
+    name: Price Lab
+    url: https://pricelabsolutions.com
+servers:
+- url: https://backend.pricelab.com.pe/api
+  description: Production
+tags:
+- name: Authentication
+- name: Users
+- name: Products
+- name: Categories
+- name: Data Import
+- name: Recommendations
+- name: Competitor Pricing
+- name: Electronic Price Tags
+- name: Price Management
+security:
+- bearerAuth: []
+paths:
+  /login/:
+    post:
+      operationId: login
+      summary: Login and obtain a JWT access token
+      tags:
+      - Authentication
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+      security: []
+  /token/refresh/:
+    post:
+      operationId: refreshToken
+      summary: Refresh a JWT access token
+      tags:
+      - Authentication
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /users/get_data/:
+    get:
+      operationId: getUserData
+      summary: Retrieve authenticated user data
+      tags:
+      - Users
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /products/:
+    get:
+      operationId: listProducts
+      summary: List products
+      tags:
+      - Products
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+    post:
+      operationId: createProduct
+      summary: Create a product
+      tags:
+      - Products
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /products/{id}/:
+    get:
+      operationId: getProduct
+      summary: Retrieve a product
+      tags:
+      - Products
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    put:
+      operationId: updateProduct
+      summary: Edit a product
+      tags:
+      - Products
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    delete:
+      operationId: deleteProduct
+      summary: Delete a product
+      tags:
+      - Products
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+  /products/update_price_cost_for_lote/:
+    post:
+      operationId: updatePriceAndCostBatch
+      summary: Update costs and prices in batch
+      tags:
+      - Products
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /products/update_price_product_for_lote/:
+    post:
+      operationId: updatePriceBatch
+      summary: Update product prices in batch
+      tags:
+      - Products
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /products/update_cost_product_for_lote/:
+    post:
+      operationId: updateCostBatch
+      summary: Update product costs in batch
+      tags:
+      - Products
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /products/update_product_info_for_lote/:
+    post:
+      operationId: updateProductInfoBatch
+      summary: Create and update product data and status in batch
+      tags:
+      - Products
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /recordsimportfiles/:
+    post:
+      operationId: importRecordsFile
+      summary: Bulk import a records file (sales transactions, stock, extra data, product replenishment,
+        offers master, or competitor prices)
+      tags:
+      - Data Import
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /pricemachines/response_recommendation/:
+    post:
+      operationId: respondToRecommendation
+      summary: Accept or reject price recommendations
+      tags:
+      - Recommendations
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /pricescrapingrules/create_policies/:
+    post:
+      operationId: createPricingPolicies
+      summary: Load competitive pricing policies
+      tags:
+      - Competitor Pricing
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /templatesubcategories/{id_category}:
+    get:
+      operationId: listLabelChildTemplates
+      summary: List child label templates for a category
+      tags:
+      - Electronic Price Tags
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+      parameters:
+      - name: id_category
+        in: path
+        required: true
+        schema:
+          type: integer
+  /templatecategories/:
+    get:
+      operationId: listLabelParentTemplates
+      summary: List parent label templates
+      tags:
+      - Electronic Price Tags
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /flashstrategies/{id}/:
+    delete:
+      operationId: deleteFlashStrategy
+      summary: Delete a flash strategy
+      tags:
+      - Electronic Price Tags
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+  /flashstrategies/active_light_led_batch/:
+    post:
+      operationId: createFlashStrategy
+      summary: Create a flash strategy (activate LED lights in batch)
+      tags:
+      - Electronic Price Tags
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /esls/active_light_led/:
+    post:
+      operationId: activateEslLed
+      summary: Turn on an electronic shelf label LED
+      tags:
+      - Electronic Price Tags
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /flashstrategies/:
+    get:
+      operationId: listFlashStrategies
+      summary: List flash strategies
+      tags:
+      - Electronic Price Tags
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /productstores/export_for_batch/:
+    get:
+      operationId: exportProductStores
+      summary: Export product-store data for a batch
+      tags:
+      - Price Management
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /pricemanagers/create_promotion_massive/:
+    post:
+      operationId: createPromotionBatch
+      summary: Create promotions in batch
+      tags:
+      - Price Management
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /pricemanagers/create_promotion_unit_store/:
+    post:
+      operationId: createPromotionUnit
+      summary: Create a promotion for a single store unit
+      tags:
+      - Price Management
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /productstores/:
+    get:
+      operationId: listProductStores
+      summary: List product prices by store
+      tags:
+      - Price Management
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /productstores/create_or_update/:
+    get:
+      operationId: initProductStores
+      summary: Assign products to a store (create or update)
+      tags:
+      - Price Management
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /pricescrapings/export_data_scraping/:
+    get:
+      operationId: exportScrapedPrices
+      summary: Export scraped competitor prices
+      tags:
+      - Competitor Pricing
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /pricescrapingrules/export_data_policy_match/:
+    get:
+      operationId: exportPricingPolicies
+      summary: Export pricing policies
+      tags:
+      - Competitor Pricing
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /pricescrapings/:
+    get:
+      operationId: exportPriceBySku
+      summary: Export scraped price by SKU
+      tags:
+      - Competitor Pricing
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /pricemachines/export_for_batch/:
+    get:
+      operationId: exportRecommendations
+      summary: Export price recommendations for a batch
+      tags:
+      - Recommendations
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /pricemachines/export_history_prices/:
+    get:
+      operationId: exportPriceHistory
+      summary: Export historical prices
+      tags:
+      - Recommendations
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /categoryproducts/:
+    get:
+      operationId: listCategories
+      summary: List product categories
+      tags:
+      - Categories
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+    post:
+      operationId: createCategory
+      summary: Create a product category
+      tags:
+      - Categories
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+  /categoryproducts/{id}/:
+    put:
+      operationId: updateCategory
+      summary: Edit a product category
+      tags:
+      - Categories
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    delete:
+      operationId: deleteCategory
+      summary: Delete a product category
+      tags:
+      - Categories
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized - missing or invalid bearer token
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT access token obtained via POST /login/ and refreshed via POST /token/refresh/

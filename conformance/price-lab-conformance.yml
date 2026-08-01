@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/price-lab-openapi.yml
+standards:
+- id: oauth2
+  conforms: false
+  evidence: no oauth2 securitySchemes; API uses JWT bearer (http/bearer)
+- id: oidc
+  conforms: false
+- id: jwt-bearer
+  conforms: true
+  evidence: http bearer scheme with bearerFormat JWT; login + token refresh operations
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: error responses not documented as application/problem+json
+- id: rest-json
+  conforms: true
+  evidence: resource-oriented JSON REST over HTTPS (Django REST Framework style trailing-slash routes)
+- id: fhir
+  conforms: false
+- id: fapi
+  conforms: false
+- id: scim
+  conforms: false

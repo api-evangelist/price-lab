@@ -1,0 +1,30 @@
+{
+  "provider": "price-lab",
+  "sources": [
+    "price-lab-authentication-api-openapi.yml",
+    "price-lab-categories-api-openapi.yml",
+    "price-lab-competitor-pricing-api-openapi.yml",
+    "price-lab-data-import-api-openapi.yml",
+    "price-lab-electronic-price-tags-api-openapi.yml",
+    "price-lab-price-management-api-openapi.yml",
+    "price-lab-products-api-openapi.yml",
+    "price-lab-recommendations-api-openapi.yml",
+    "price-lab-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "price-lab-authentication-api-openapi.yml",
+    "price-lab-categories-api-openapi.yml",
+    "price-lab-competitor-pricing-api-openapi.yml",
+    "price-lab-data-import-api-openapi.yml",
+    "price-lab-electronic-price-tags-api-openapi.yml",
+    "price-lab-price-management-api-openapi.yml",
+    "price-lab-products-api-openapi.yml",
+    "price-lab-recommendations-api-openapi.yml",
+    "price-lab-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

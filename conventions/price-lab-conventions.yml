@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/price-lab-openapi.yml + https://price-lab.readme.io/
+authentication:
+  style: jwt-bearer
+  header: 'Authorization: Bearer <token>'
+  login: POST /login/
+  refresh: POST /token/refresh/
+  ref: authentication/price-lab-authentication.yml
+idempotency:
+  supported: false
+  notes: No idempotency-key header or contract documented. Batch update endpoints (update_*_for_lote)
+    are not documented as idempotent.
+pagination:
+  style: undocumented
+  notes: List endpoints (/products/, /categoryproducts/, /productstores/, /flashstrategies/) return collections;
+    pagination params/response envelope not documented (Django REST Framework default page/page_size is
+    likely but unconfirmed).
+bulk_operations:
+  pattern: file-import + *_for_lote batch endpoints
+  notes: Bulk ingestion via POST /recordsimportfiles/ (multipart file) and per-domain batch update endpoints.
+request_tracing:
+  header: null
+  notes: No request-id/trace header documented.
+versioning:
+  ref: lifecycle/price-lab-lifecycle.yml
+error_envelope:
+  format: http-status
+  ref: errors/price-lab-problem-types.yml
+rate_limiting:
+  documented: false

@@ -1,0 +1,116 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: openapi/price-lab-openapi.yml
+note: No official hosted MCP server was found for Price Lab. Candidate tool list derived one-per-operation
+  from the OpenAPI.
+server:
+  name: price-lab
+  transport: stdio
+tools:
+- name: login
+  description: Login and obtain a JWT access token
+  source_operation: openapi/price-lab-openapi.yml#login
+- name: refreshToken
+  description: Refresh a JWT access token
+  source_operation: openapi/price-lab-openapi.yml#refreshToken
+- name: getUserData
+  description: Retrieve authenticated user data
+  source_operation: openapi/price-lab-openapi.yml#getUserData
+- name: listProducts
+  description: List products
+  source_operation: openapi/price-lab-openapi.yml#listProducts
+- name: createProduct
+  description: Create a product
+  source_operation: openapi/price-lab-openapi.yml#createProduct
+- name: getProduct
+  description: Retrieve a product
+  source_operation: openapi/price-lab-openapi.yml#getProduct
+- name: updateProduct
+  description: Edit a product
+  source_operation: openapi/price-lab-openapi.yml#updateProduct
+- name: deleteProduct
+  description: Delete a product
+  source_operation: openapi/price-lab-openapi.yml#deleteProduct
+- name: updatePriceAndCostBatch
+  description: Update costs and prices in batch
+  source_operation: openapi/price-lab-openapi.yml#updatePriceAndCostBatch
+- name: updatePriceBatch
+  description: Update product prices in batch
+  source_operation: openapi/price-lab-openapi.yml#updatePriceBatch
+- name: updateCostBatch
+  description: Update product costs in batch
+  source_operation: openapi/price-lab-openapi.yml#updateCostBatch
+- name: updateProductInfoBatch
+  description: Create and update product data and status in batch
+  source_operation: openapi/price-lab-openapi.yml#updateProductInfoBatch
+- name: importRecordsFile
+  description: Bulk import a records file (sales transactions, stock, extra data, product replenishment,
+    offers master, or competitor prices)
+  source_operation: openapi/price-lab-openapi.yml#importRecordsFile
+- name: respondToRecommendation
+  description: Accept or reject price recommendations
+  source_operation: openapi/price-lab-openapi.yml#respondToRecommendation
+- name: createPricingPolicies
+  description: Load competitive pricing policies
+  source_operation: openapi/price-lab-openapi.yml#createPricingPolicies
+- name: listLabelChildTemplates
+  description: List child label templates for a category
+  source_operation: openapi/price-lab-openapi.yml#listLabelChildTemplates
+- name: listLabelParentTemplates
+  description: List parent label templates
+  source_operation: openapi/price-lab-openapi.yml#listLabelParentTemplates
+- name: deleteFlashStrategy
+  description: Delete a flash strategy
+  source_operation: openapi/price-lab-openapi.yml#deleteFlashStrategy
+- name: createFlashStrategy
+  description: Create a flash strategy (activate LED lights in batch)
+  source_operation: openapi/price-lab-openapi.yml#createFlashStrategy
+- name: activateEslLed
+  description: Turn on an electronic shelf label LED
+  source_operation: openapi/price-lab-openapi.yml#activateEslLed
+- name: listFlashStrategies
+  description: List flash strategies
+  source_operation: openapi/price-lab-openapi.yml#listFlashStrategies
+- name: exportProductStores
+  description: Export product-store data for a batch
+  source_operation: openapi/price-lab-openapi.yml#exportProductStores
+- name: createPromotionBatch
+  description: Create promotions in batch
+  source_operation: openapi/price-lab-openapi.yml#createPromotionBatch
+- name: createPromotionUnit
+  description: Create a promotion for a single store unit
+  source_operation: openapi/price-lab-openapi.yml#createPromotionUnit
+- name: listProductStores
+  description: List product prices by store
+  source_operation: openapi/price-lab-openapi.yml#listProductStores
+- name: initProductStores
+  description: Assign products to a store (create or update)
+  source_operation: openapi/price-lab-openapi.yml#initProductStores
+- name: exportScrapedPrices
+  description: Export scraped competitor prices
+  source_operation: openapi/price-lab-openapi.yml#exportScrapedPrices
+- name: exportPricingPolicies
+  description: Export pricing policies
+  source_operation: openapi/price-lab-openapi.yml#exportPricingPolicies
+- name: exportPriceBySku
+  description: Export scraped price by SKU
+  source_operation: openapi/price-lab-openapi.yml#exportPriceBySku
+- name: exportRecommendations
+  description: Export price recommendations for a batch
+  source_operation: openapi/price-lab-openapi.yml#exportRecommendations
+- name: exportPriceHistory
+  description: Export historical prices
+  source_operation: openapi/price-lab-openapi.yml#exportPriceHistory
+- name: listCategories
+  description: List product categories
+  source_operation: openapi/price-lab-openapi.yml#listCategories
+- name: createCategory
+  description: Create a product category
+  source_operation: openapi/price-lab-openapi.yml#createCategory
+- name: updateCategory
+  description: Edit a product category
+  source_operation: openapi/price-lab-openapi.yml#updateCategory
+- name: deleteCategory
+  description: Delete a product category
+  source_operation: openapi/price-lab-openapi.yml#deleteCategory

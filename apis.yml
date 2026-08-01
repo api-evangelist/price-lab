@@ -1,7 +1,30 @@
 aid: price-lab
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/price-lab.png
 name: Price Lab
-description: Price Lab is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Price Lab (Price Lab Solutions) is a Latin American retail pricing intelligence
+  platform that helps retailers and e-commerce merchants monitor competitor prices,
+  analyze pricing KPIs, and apply AI-driven price optimization across their catalog
+  and store network. The platform pairs competitor price scraping and competitive
+  pricing policies with a recommendation engine, bulk data ingestion (sales, stock,
+  replenishment, offers, and competitor prices), and electronic shelf label (ESL)
+  management with flash strategies. Its production REST API, documented at
+  price-lab.readme.io and hosted at backend.pricelab.com.pe, exposes product and
+  category master data, batch price and cost updates, competitor price exports,
+  recommendation accept/reject flows, and store-level price management, all secured
+  with JWT bearer authentication.
 url: https://raw.githubusercontent.com/api-evangelist/price-lab/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,15 +34,160 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Pricing
+- Retail
+- E-commerce
+- Competitive Intelligence
+- Price Optimization
+- Artificial Intelligence
+- Electronic Shelf Labels
+- Latin America
+apis:
+- aid: price-lab:price-lab-authentication-api
+  name: Price Lab Authentication API
+  description: The Authentication API from Price Lab — 2 operation(s) for authentication.
+  humanURL: https://price-lab.readme.io/
+  baseURL: https://backend.pricelab.com.pe/api
+  tags:
+  - Authentication
+  properties:
+  - type: OpenAPI
+    url: openapi/price-lab-authentication-api-openapi.yml
+- aid: price-lab:price-lab-categories-api
+  name: Price Lab Categories API
+  description: The Categories API from Price Lab — 2 operation(s) for categories.
+  humanURL: https://price-lab.readme.io/
+  baseURL: https://backend.pricelab.com.pe/api
+  tags:
+  - Categories
+  properties:
+  - type: OpenAPI
+    url: openapi/price-lab-categories-api-openapi.yml
+- aid: price-lab:price-lab-competitor-pricing-api
+  name: Price Lab Competitor Pricing API
+  description: The Competitor Pricing API from Price Lab — 4 operation(s) for competitor pricing.
+  humanURL: https://price-lab.readme.io/
+  baseURL: https://backend.pricelab.com.pe/api
+  tags:
+  - Competitor Pricing
+  properties:
+  - type: OpenAPI
+    url: openapi/price-lab-competitor-pricing-api-openapi.yml
+- aid: price-lab:price-lab-data-import-api
+  name: Price Lab Data Import API
+  description: The Data Import API from Price Lab — 1 operation(s) for data import.
+  humanURL: https://price-lab.readme.io/
+  baseURL: https://backend.pricelab.com.pe/api
+  tags:
+  - Data Import
+  properties:
+  - type: OpenAPI
+    url: openapi/price-lab-data-import-api-openapi.yml
+- aid: price-lab:price-lab-electronic-price-tags-api
+  name: Price Lab Electronic Price Tags API
+  description: The Electronic Price Tags API from Price Lab — 6 operation(s) for electronic price tags.
+  humanURL: https://price-lab.readme.io/
+  baseURL: https://backend.pricelab.com.pe/api
+  tags:
+  - Electronic Price Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/price-lab-electronic-price-tags-api-openapi.yml
+- aid: price-lab:price-lab-price-management-api
+  name: Price Lab Price Management API
+  description: The Price Management API from Price Lab — 5 operation(s) for price management.
+  humanURL: https://price-lab.readme.io/
+  baseURL: https://backend.pricelab.com.pe/api
+  tags:
+  - Price Management
+  properties:
+  - type: OpenAPI
+    url: openapi/price-lab-price-management-api-openapi.yml
+- aid: price-lab:price-lab-products-api
+  name: Price Lab Products API
+  description: The Products API from Price Lab — 6 operation(s) for products.
+  humanURL: https://price-lab.readme.io/
+  baseURL: https://backend.pricelab.com.pe/api
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/price-lab-products-api-openapi.yml
+- aid: price-lab:price-lab-recommendations-api
+  name: Price Lab Recommendations API
+  description: The Recommendations API from Price Lab — 3 operation(s) for recommendations.
+  humanURL: https://price-lab.readme.io/
+  baseURL: https://backend.pricelab.com.pe/api
+  tags:
+  - Recommendations
+  properties:
+  - type: OpenAPI
+    url: openapi/price-lab-recommendations-api-openapi.yml
+- aid: price-lab:price-lab-users-api
+  name: Price Lab Users API
+  description: The Users API from Price Lab — 1 operation(s) for users.
+  humanURL: https://price-lab.readme.io/
+  baseURL: https://backend.pricelab.com.pe/api
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/price-lab-users-api-openapi.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/price-lab-domain-security.yml
+- type: AgenticAccess
+  url: agentic-access/price-lab-agentic-access.yml
+- type: Authentication
+  url: authentication/price-lab-authentication.yml
 - type: Website
   url: https://pricelabsolutions.com
+- type: DeveloperPortal
+  url: https://price-lab.readme.io/
+- type: Documentation
+  url: https://price-lab.readme.io/
+- type: APIReference
+  url: https://price-lab.readme.io/reference
+- type: Blog
+  url: https://pricelabsolutions.com/blog/
+- type: Support
+  url: https://pricelabsolutions.com/soporte-tecnico/
+- type: SignUp
+  url: https://pricelabsolutions.com/#contactHome
+- type: TermsOfService
+  url: https://pricelabsolutions.com/terminos-y-condiciones
+- type: PrivacyPolicy
+  url: https://pricelabsolutions.com/politica-privacidad/
+- type: LLMsTxt
+  url: llms/price-lab-llms.txt
+- type: MCPServer
+  url: mcp/price-lab-mcp.yml
+- type: WellKnown
+  url: well-known/price-lab-well-known.yml
+- type: Overlay
+  url: overlays/price-lab-openapi-overlay.yaml
+- type: Conformance
+  url: conformance/price-lab-conformance.yml
+- type: ErrorCatalog
+  url: errors/price-lab-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/price-lab-lifecycle.yml
+- type: Conventions
+  url: conventions/price-lab-conventions.yml
+- type: DataModel
+  url: data-model/price-lab-data-model.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 17
+  pass: local-v1
