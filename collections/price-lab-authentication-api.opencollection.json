@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Price Lab Authentication API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Authentication",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Login and obtain a JWT access token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/login/"
+          },
+          "docs": "Login and obtain a JWT access token"
+        },
+        {
+          "info": {
+            "name": "Refresh a JWT access token",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/token/refresh/"
+          },
+          "docs": "Refresh a JWT access token"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

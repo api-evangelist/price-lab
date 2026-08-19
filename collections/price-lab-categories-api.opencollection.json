@@ -1,0 +1,82 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Price Lab Authentication Categories API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Categories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List product categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/categoryproducts/"
+          },
+          "docs": "List product categories"
+        },
+        {
+          "info": {
+            "name": "Create a product category",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/categoryproducts/"
+          },
+          "docs": "Create a product category"
+        },
+        {
+          "info": {
+            "name": "Edit a product category",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://backend.pricelab.com.pe/api/categoryproducts/:id/",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Edit a product category"
+        },
+        {
+          "info": {
+            "name": "Delete a product category",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://backend.pricelab.com.pe/api/categoryproducts/:id/",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a product category"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

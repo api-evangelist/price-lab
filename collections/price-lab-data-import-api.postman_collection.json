@@ -1,0 +1,188 @@
+{
+  "item": [
+    {
+      "id": "93689769-f8f6-4cd2-aadf-269578599b86",
+      "name": "Data Import",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4d738c55-cdde-422f-9101-b4a467892689",
+          "name": "Bulk import a records file (sales transactions, stock, extra data, product replenishment, offers master, or competitor prices)",
+          "request": {
+            "name": "Bulk import a records file (sales transactions, stock, extra data, product replenishment, offers master, or competitor prices)",
+            "description": {},
+            "url": {
+              "path": [
+                "recordsimportfiles",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "869829b4-28fc-4b35-a82a-c440d6a43005",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "recordsimportfiles",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "33991431-762f-44cc-8661-e563168f4895",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "recordsimportfiles",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9cad5628-eeb3-49db-9727-e5a2e6bd9446",
+              "name": "Unauthorized - missing or invalid bearer token",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "recordsimportfiles",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://backend.pricelab.com.pe/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b84b64b7-a873-4c4d-8b5a-8926d7973aeb",
+    "name": "Price Lab Authentication Data Import API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Price Lab retail pricing platform: product and category master data, bulk data import (sales, stock, replenishment, competitor prices), price recommendations, competitor price scraping and policies, electronic shelf labels (ESL) and flash strategies, and store-level price management. Derived from the provider's published endpoint index (price-lab.readme.io/llms.txt).\n\nContact Support:\n Name: Price Lab",
+      "type": "text/plain"
+    }
+  }
+}

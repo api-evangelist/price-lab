@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Price Lab Authentication Price Management API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Price Management",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Export product-store data for a batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/productstores/export_for_batch/"
+          },
+          "docs": "Export product-store data for a batch"
+        },
+        {
+          "info": {
+            "name": "Create promotions in batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/pricemanagers/create_promotion_massive/"
+          },
+          "docs": "Create promotions in batch"
+        },
+        {
+          "info": {
+            "name": "Create a promotion for a single store unit",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/pricemanagers/create_promotion_unit_store/"
+          },
+          "docs": "Create a promotion for a single store unit"
+        },
+        {
+          "info": {
+            "name": "List product prices by store",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/productstores/"
+          },
+          "docs": "List product prices by store"
+        },
+        {
+          "info": {
+            "name": "Assign products to a store (create or update)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/productstores/create_or_update/"
+          },
+          "docs": "Assign products to a store (create or update)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

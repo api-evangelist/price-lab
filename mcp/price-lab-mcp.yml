@@ -114,3 +114,9 @@ tools:
 - name: deleteCategory
   description: Delete a product category
   source_operation: openapi/price-lab-openapi.yml#deleteCategory
+deployment:
+  mode: none
+  verified: derived
+  tools: 35
+  checked: '2026-08-12'
+  source: catalog MCP census

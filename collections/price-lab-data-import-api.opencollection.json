@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Price Lab Authentication Data Import API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Data Import",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Bulk import a records file (sales transactions, stock, extra data, product replenishment, offers master, or competitor prices)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/recordsimportfiles/"
+          },
+          "docs": "Bulk import a records file (sales transactions, stock, extra data, product replenishment, offers master, or competitor prices)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

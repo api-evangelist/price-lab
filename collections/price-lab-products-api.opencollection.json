@@ -1,0 +1,144 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Price Lab Authentication Products API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Products",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List products",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/products/"
+          },
+          "docs": "List products"
+        },
+        {
+          "info": {
+            "name": "Create a product",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/products/"
+          },
+          "docs": "Create a product"
+        },
+        {
+          "info": {
+            "name": "Retrieve a product",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/products/:id/",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a product"
+        },
+        {
+          "info": {
+            "name": "Edit a product",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://backend.pricelab.com.pe/api/products/:id/",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Edit a product"
+        },
+        {
+          "info": {
+            "name": "Delete a product",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://backend.pricelab.com.pe/api/products/:id/",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a product"
+        },
+        {
+          "info": {
+            "name": "Update costs and prices in batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/products/update_price_cost_for_lote/"
+          },
+          "docs": "Update costs and prices in batch"
+        },
+        {
+          "info": {
+            "name": "Update product prices in batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/products/update_price_product_for_lote/"
+          },
+          "docs": "Update product prices in batch"
+        },
+        {
+          "info": {
+            "name": "Update product costs in batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/products/update_cost_product_for_lote/"
+          },
+          "docs": "Update product costs in batch"
+        },
+        {
+          "info": {
+            "name": "Create and update product data and status in batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/products/update_product_info_for_lote/"
+          },
+          "docs": "Create and update product data and status in batch"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

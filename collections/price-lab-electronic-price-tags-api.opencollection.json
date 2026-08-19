@@ -1,0 +1,104 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Price Lab Authentication Electronic Price Tags API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Electronic Price Tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List child label templates for a category",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/templatesubcategories/:id_category",
+            "params": [
+              {
+                "name": "id_category",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List child label templates for a category"
+        },
+        {
+          "info": {
+            "name": "List parent label templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/templatecategories/"
+          },
+          "docs": "List parent label templates"
+        },
+        {
+          "info": {
+            "name": "Delete a flash strategy",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://backend.pricelab.com.pe/api/flashstrategies/:id/",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a flash strategy"
+        },
+        {
+          "info": {
+            "name": "Create a flash strategy (activate LED lights in batch)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/flashstrategies/active_light_led_batch/"
+          },
+          "docs": "Create a flash strategy (activate LED lights in batch)"
+        },
+        {
+          "info": {
+            "name": "Turn on an electronic shelf label LED",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/esls/active_light_led/"
+          },
+          "docs": "Turn on an electronic shelf label LED"
+        },
+        {
+          "info": {
+            "name": "List flash strategies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/flashstrategies/"
+          },
+          "docs": "List flash strategies"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Price Lab Authentication Competitor Pricing API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Competitor Pricing",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Load competitive pricing policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/pricescrapingrules/create_policies/"
+          },
+          "docs": "Load competitive pricing policies"
+        },
+        {
+          "info": {
+            "name": "Export scraped competitor prices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/pricescrapings/export_data_scraping/"
+          },
+          "docs": "Export scraped competitor prices"
+        },
+        {
+          "info": {
+            "name": "Export pricing policies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/pricescrapingrules/export_data_policy_match/"
+          },
+          "docs": "Export pricing policies"
+        },
+        {
+          "info": {
+            "name": "Export scraped price by SKU",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/pricescrapings/"
+          },
+          "docs": "Export scraped price by SKU"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

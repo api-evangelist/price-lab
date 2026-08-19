@@ -1,0 +1,57 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Price Lab Authentication Recommendations API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Recommendations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Accept or reject price recommendations",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://backend.pricelab.com.pe/api/pricemachines/response_recommendation/"
+          },
+          "docs": "Accept or reject price recommendations"
+        },
+        {
+          "info": {
+            "name": "Export price recommendations for a batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/pricemachines/export_for_batch/"
+          },
+          "docs": "Export price recommendations for a batch"
+        },
+        {
+          "info": {
+            "name": "Export historical prices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://backend.pricelab.com.pe/api/pricemachines/export_history_prices/"
+          },
+          "docs": "Export historical prices"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
