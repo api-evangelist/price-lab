@@ -39,6 +39,16 @@ tags:
 - Company
 - Pricing
 - Retail
+- E-Commerce
+- Competitive Intelligence
+- Price Optimization
+- Artificial Intelligence
+- Electronic Shelf Labels
+- Latin America
+tags_raw:
+- Company
+- Pricing
+- Retail
 - E-commerce
 - Competitive Intelligence
 - Price Optimization
@@ -112,6 +122,8 @@ apis:
   humanURL: https://price-lab.readme.io/
   baseURL: https://backend.pricelab.com.pe/api
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
@@ -132,6 +144,8 @@ apis:
   humanURL: https://price-lab.readme.io/
   baseURL: https://backend.pricelab.com.pe/api
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
