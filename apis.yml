@@ -168,6 +168,9 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: CapabilityMap
+  url: capabilities/price-lab-capability-edges.yml
+  name: Price Lab Business Capability Map
 - type: DomainSecurity
   url: security/price-lab-domain-security.yml
 - type: AgenticAccess
