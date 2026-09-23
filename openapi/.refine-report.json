@@ -1,15 +1,7 @@
 {
   "provider": "price-lab",
   "sources": [
-    "price-lab-authentication-api-openapi.yml",
-    "price-lab-categories-api-openapi.yml",
-    "price-lab-competitor-pricing-api-openapi.yml",
-    "price-lab-data-import-api-openapi.yml",
-    "price-lab-electronic-price-tags-api-openapi.yml",
-    "price-lab-price-management-api-openapi.yml",
-    "price-lab-products-api-openapi.yml",
-    "price-lab-recommendations-api-openapi.yml",
-    "price-lab-users-api-openapi.yml"
+    "_original/price-lab-openapi.yml"
   ],
   "outputs": [
     "price-lab-authentication-api-openapi.yml",
@@ -25,6 +17,20 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "price-lab-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "price-lab-authentication-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "price-lab-categories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "price-lab-competitor-pricing-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "price-lab-data-import-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "price-lab-electronic-price-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "price-lab-price-management-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "price-lab-products-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "price-lab-recommendations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "price-lab-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

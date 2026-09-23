@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Price Lab Authentication Competitor Pricing API
+  title: Price Lab Competitor Pricing API
   description: 'REST API for the Price Lab retail pricing platform: product and category master data, bulk data import (sales, stock, replenishment, competitor prices), price recommendations, competitor price scraping and policies, electronic shelf labels (ESL) and flash strategies, and store-level price management. Derived from the provider''s published endpoint index (price-lab.readme.io/llms.txt).'
   version: 1.0.0
   contact:

@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Price Lab Authentication Data Import API
+  title: Price Lab Data Import API
   description: 'REST API for the Price Lab retail pricing platform: product and category master data, bulk data import (sales, stock, replenishment, competitor prices), price recommendations, competitor price scraping and policies, electronic shelf labels (ESL) and flash strategies, and store-level price management. Derived from the provider''s published endpoint index (price-lab.readme.io/llms.txt).'
   version: 1.0.0
   contact:
@@ -17,7 +17,7 @@ paths:
   /recordsimportfiles/:
     post:
       operationId: importRecordsFile
-      summary: Bulk import a records file (sales transactions, stock, extra data, product replenishment, offers master, or competitor prices)
+      summary: Bulk import a records file (sales transactions, stock, extra data, product…
       tags:
       - Data Import
       responses:
