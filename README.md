@@ -64,6 +64,131 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Price Lab is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Price Lab (Price Lab Solutions) is a Latin American retail pricing intelligence platform that helps retailers and e-commerce merchants monitor competitor prices, analyze pricing KPIs, and apply AI-driven price optimization across their catalog and store network. The platform pairs competitor price scraping and competitive pricing policies with a recommendation engine, bulk data ingestion (sales, stock, replenishment, offers, and competitor prices), and electronic shelf label (ESL) management with flash strategies. Its production REST API, documented at price-lab.readme.io and hosted at backend.pricelab.com.pe, exposes product and category master data, batch price and cost updates, competitor price exports, recommendation accept/reject flows, and store-level price management, all secured with JWT bearer authentication.
 
-Backed by: 500-global — https://pricelabsolutions.com
+**Areas:** Company · Pricing · Retail · E-Commerce · Competitive Intelligence · Price Optimization · Artificial Intelligence · Electronic Shelf Labels · Latin America
+
+## Price Lab on APIs.io
+
+Everything profiled for Price Lab is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/price-lab/](https://apis.io/providers/price-lab/)** — or go straight to one of the APIs or properties below.
+
+### APIs (9)
+
+- [Price Lab Authentication API](https://apis.io/apis/price-lab/price-lab-authentication-api/) — The Authentication API from Price Lab — 2 operation(s) for authentication.
+- [Price Lab Categories API](https://apis.io/apis/price-lab/price-lab-categories-api/) — The Categories API from Price Lab — 2 operation(s) for categories.
+- [Price Lab Competitor Pricing API](https://apis.io/apis/price-lab/price-lab-competitor-pricing-api/) — The Competitor Pricing API from Price Lab — 4 operation(s) for competitor pricing.
+- [Price Lab Data Import API](https://apis.io/apis/price-lab/price-lab-data-import-api/) — The Data Import API from Price Lab — 1 operation(s) for data import.
+- [Price Lab Electronic Price Tags API](https://apis.io/apis/price-lab/price-lab-electronic-price-tags-api/) — The Electronic Price Tags API from Price Lab — 6 operation(s) for electronic price tags.
+- [Price Lab Price Management API](https://apis.io/apis/price-lab/price-lab-price-management-api/) — The Price Management API from Price Lab — 5 operation(s) for price management.
+- [Price Lab Products API](https://apis.io/apis/price-lab/price-lab-products-api/) — The Products API from Price Lab — 6 operation(s) for products.
+- [Price Lab Recommendations API](https://apis.io/apis/price-lab/price-lab-recommendations-api/) — The Recommendations API from Price Lab — 3 operation(s) for recommendations.
+- [Price Lab Users API](https://apis.io/apis/price-lab/price-lab-users-api/) — The Users API from Price Lab — 1 operation(s) for users.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [price-lab](https://apis.io/servers/price-lab/price-lab/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Price Lab Agentic Access](https://apis.io/agentic-access/price-lab/price-lab-agentic-access/)
+
+#### Collections (9)
+
+Postman and Open Collection request collections.
+
+- [Price Lab Authentication API](https://apis.io/collections/price-lab/open-price-lab-authentication-api/)
+- [Price Lab Authentication Categories API](https://apis.io/collections/price-lab/open-price-lab-categories-api/)
+- [Price Lab Authentication Competitor Pricing API](https://apis.io/collections/price-lab/open-price-lab-competitor-pricing-api/)
+- [Price Lab Authentication Data Import API](https://apis.io/collections/price-lab/open-price-lab-data-import-api/)
+- [Price Lab Authentication Electronic Price Tags API](https://apis.io/collections/price-lab/open-price-lab-electronic-price-tags-api/)
+- [Price Lab Authentication Price Management API](https://apis.io/collections/price-lab/open-price-lab-price-management-api/)
+- [Price Lab Authentication Products API](https://apis.io/collections/price-lab/open-price-lab-products-api/)
+- [Price Lab Authentication Recommendations API](https://apis.io/collections/price-lab/open-price-lab-recommendations-api/)
+- [Price Lab Authentication Users API](https://apis.io/collections/price-lab/open-price-lab-users-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Price Lab Openapi Overlay](https://apis.io/overlays/price-lab/price-lab-openapi-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Price Lab Authentication](https://apis.io/security/price-lab/price-lab-authentication/)
+- [Price Lab Domain Security](https://apis.io/security/price-lab/price-lab-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://pricelabsolutions.com)
+- [Documentation](https://price-lab.readme.io/)
+- [API reference](https://price-lab.readme.io/reference)
+- [Sign up](https://pricelabsolutions.com/#contactHome)
+- [Support](https://pricelabsolutions.com/soporte-tecnico/)
+- [Blog](https://pricelabsolutions.com/blog/)
+- [Terms of service](https://pricelabsolutions.com/terminos-y-condiciones)
+- [Privacy policy](https://pricelabsolutions.com/politica-privacidad/)
+
+## API Evangelist rating
+
+**Kin Score 32.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 47.9 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 33.9 |
+| Access clarity | 27.6 |
+
+**Agent readiness 18.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/price-lab/](https://apis.io/providers/price-lab/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Price Lab: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/price-lab/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
